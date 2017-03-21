@@ -10,9 +10,10 @@ var io = require('socket.io')(server);
  *  ###### Basis http server ######
  */
 app.get('/', function (req, res) {
-  res.sendFile(__dirname + '/client');
-})
+    res.sendFile(__dirname + '/client');
+});
 app.use(express.static('client'));
+server.listen(80);
 
 /*
  *  ###### Socket.io Section ######
@@ -75,8 +76,6 @@ io.on('connection', function(socket) {
     delete CLIENT_LIST[socket.id];
   });
 });
-
-server.listen(3000);
 
 function isUnique(key, list) {
   for (var i in list) {
