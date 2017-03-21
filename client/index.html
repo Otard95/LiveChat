@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="assets/css/main.css" rel="stylesheet">
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <script src="Scripts/main.js"></script>
+  </head>
+  <body>
+    <div class="chatView">
+      <div class="status">
+        <div class="lable">Your nickname:</div>
+        <input class="myName" type="text" value="Guest">
+        <button class="changeNameBtn" onClick="chat.updateName()">Update</button>
+      </div>
+      <div class="content"></div>
+      <div class="chatInput">
+        <input id="chatInput" type="text" placeholder="Write a message here.">
+        <button onClick="chat.send()">Send</button>
+      </div>
+    </div>
+  </body>
+</html>
